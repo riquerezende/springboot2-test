@@ -3,6 +3,7 @@ package henrique.springboot2test.controller;
 import henrique.springboot2test.constant.Constant;
 import henrique.springboot2test.domain.ContaCorrente;
 import henrique.springboot2test.domain.Transacao;
+import henrique.springboot2test.dto.ContaCorrenteDto;
 import henrique.springboot2test.dto.TransacaoDto;
 import henrique.springboot2test.service.ContaCorrenteService;
 import lombok.RequiredArgsConstructor;
@@ -20,9 +21,9 @@ public class ContaCorrenteController {
     private final ContaCorrenteService contaCorrenteService;
 
     @PostMapping(path = Constant.CRIAR_CONTA_CORRENTE)
-    public ResponseEntity<ContaCorrente> criarContaCorrente(@RequestBody ContaCorrente contaCorrente) {
-        log.info("Criar conta corrente {} ", contaCorrente);
-        return new ResponseEntity<>(contaCorrenteService.criarContaCorrente(contaCorrente), HttpStatus.CREATED);
+    public ResponseEntity<ContaCorrente> criarContaCorrente(@RequestBody ContaCorrenteDto contaCorrenteDto) {
+        log.info("Criar conta corrente {} ", contaCorrenteDto);
+        return new ResponseEntity<>(contaCorrenteService.criarContaCorrente(contaCorrenteDto), HttpStatus.CREATED);
     }
 
     @GetMapping(path = Constant.CONSULTAR_EXTRATO)

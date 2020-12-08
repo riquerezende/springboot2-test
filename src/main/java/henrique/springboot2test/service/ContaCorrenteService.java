@@ -2,6 +2,7 @@ package henrique.springboot2test.service;
 
 import henrique.springboot2test.domain.ContaCorrente;
 import henrique.springboot2test.domain.Transacao;
+import henrique.springboot2test.dto.ContaCorrenteDto;
 import henrique.springboot2test.dto.TransacaoDto;
 import henrique.springboot2test.enumeration.TipoTransacao;
 import henrique.springboot2test.repository.ContaCorrenteRepository;
@@ -19,12 +20,18 @@ public class ContaCorrenteService {
 
     private final ContaCorrenteRepository contaCorrenteRepository;
 
-    public ContaCorrente criarContaCorrente(ContaCorrente contaCorrente) {
-        if (Optional.ofNullable(contaCorrenteRepository.findByNumeroConta(contaCorrente.getNumeroConta())).isPresent()) {
+    public ContaCorrente criarContaCorrente(ContaCorrenteDto contaCorrenteDto) {
+        if (Optional.ofNullable(contaCorrenteRepository.findByNumeroConta(contaCorrenteDto.getNumeroConta())).isPresent()) {
             return null;
         }
+        ContaCorrente contaCorrente = ContaCorrente.builder()
+                .numeroConta(contaCorrenteDto.getNumeroConta())
+                .nome(contaCorrenteDto.getNome())
+                .senha(contaCorrenteDto.getSenha())
+                .build();
+
         String senhaSegura = GeradorSenhaSegura.gerarSenhaSegura(contaCorrente.getSenha());
-        contaCorrente.setSenha(senhaSegura);
+        contaCorrenteDto.setSenha(senhaSegura);
         contaCorrenteRepository.save(contaCorrente);
         contaCorrente.setSenha(null);
         return contaCorrente;
