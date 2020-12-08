@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "27ba1256-0c06-4482-8765-b685a294e40c",
+		"name": "Requisições",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "criar-conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"nome\": \"Carlos Henrique Rezende Santos\",\r\n    \"senha\": \"henrique\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/criar-conta-corrente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"criar-conta-corrente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "efetuar-deposito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"valor\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/efetuar-deposito",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"efetuar-deposito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "efetuar-saque",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/efetuar-saque",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"efetuar-saque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar-saldo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/consultar-saldo/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"consultar-saldo",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar-extrato",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/consultar-extrato/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"consultar-extrato",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar-conta heroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"nome\": \"Carlos Henrique Rezende Santos\",\r\n    \"senha\": \"henrique\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://springboot2-test.herokuapp.com/conta-corrente/criar-conta-corrente",
+					"protocol": "http",
+					"host": [
+						"springboot2-test",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"conta-corrente",
+						"criar-conta-corrente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "efetuar-deposito heroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"valor\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/efetuar-deposito",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"efetuar-deposito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "efetuar-saque heroku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 10,\r\n    \"valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/efetuar-saque",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"efetuar-saque"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar-saldo heroku",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/consultar-saldo/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"consultar-saldo",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar-extrato heroku",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conta-corrente/consultar-extrato/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta-corrente",
+						"consultar-extrato",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
