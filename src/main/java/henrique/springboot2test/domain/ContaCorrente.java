@@ -22,7 +22,6 @@ public class ContaCorrente {
     private Long numeroConta;
     private String nome;
     private String senha;
-    private Double saldo;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "conta_corrente_id", referencedColumnName = "conta_corrente_id")
